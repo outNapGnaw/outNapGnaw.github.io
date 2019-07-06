@@ -1,0 +1,72 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="user-scalable=0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <meta property="og:type" content="cloud-game" />
+    <meta property="og:title" content="Cloud Gaming - NES Emulator" />
+    <meta property="og:description" content="Play and share cloud gaming experience with your friends" />
+    <!-- <meta property="og:image" content="http://cloud.webgame2d.com/static/img/ogimage.jpg" /> -->
+    <meta property="og:url" content="" />
+    <meta property="og:site_name" content="Cloud gaming" />
+    <meta property="og:author" content="giongto35 trichimtrich" />
+
+    <link href="https://peytonwang.gitee.io/giteepage/mobile-fc-static/css/font-awesome.css?1" rel="stylesheet">
+    <link href="https://peytonwang.gitee.io/giteepage/mobile-fc-static/css/main.css?1" rel="stylesheet">
+</head>
+
+<body>
+    <div id="gamebody">
+        <div id="circle-pad-holder">
+            <div id="btn-up" class="dpad" value="up"></div>
+            <div id="btn-down" class="dpad" value="down"></div>
+            <div id="btn-left" class="dpad" value="left"></div>
+            <div id="btn-right" class="dpad" value="right"></div>
+            <div id="circle-pad"></div>
+        </div>
+
+        <div id="bottom-screen">
+            <!--NOTE: New browser doesn't allow unmuted video player. So we muted here. 
+                There is still audio because current audio flow is not from media but it is manually encoded (technical webRTC challenge). Later, when we can integrate audio to media, we can face the issue with mute again .
+                https://developers.google.com/web/updates/2017/09/autoplay-policy-changes
+            -->
+            <!-- <video id="game-screen" autoplay=true muted poster="/images/screen_loading.gif"></video> -->
+            <div id="game-screen">
+                <canvas id="nes-canvas" width="256" height="240" style="width: 100%"/>
+            </div>
+            <div id="menu-screen">
+                <div id="menu-container">
+                </div>
+                <div id="menu-item-choice"></div>
+            </div>
+        </div>
+
+        <div id="color-button-holder">
+            <div id="btn-select" unselectable="on" class="btn unselectable" value="select">Select</div>
+            <div id="btn-start" unselectable="on" class="btn unselectable" value="start">Start</div>
+            <div id="btn-a" unselectable="on" class="btn unselectable" value="a">A</div>
+            <div id="btn-b" unselectable="on" class="btn unselectable" value="b">B</div>
+        </div>
+
+        <div id="lights-holder">
+            <div id="light-1"></div>
+            <div id="light-2"></div>
+            <div id="light-3"></div>
+        </div>
+    </div>
+
+
+    <script>
+        var DEBUG = true;
+    </script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jsnes/1.1.0/jsnes.min.js"></script>
+    <script src="https://cdn.bootcss.com/vConsole/3.3.0/vconsole.min.js"></script>
+    <script src="https://peytonwang.gitee.io/giteepage/mobile-fc-static/main.min.js"></script>
+
+</body>
+
+</html>
