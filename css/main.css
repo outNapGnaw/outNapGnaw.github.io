@@ -2,7 +2,7 @@
     margin: 0;
 }
 body {
-    background-image: url('https://peytonwang.gitee.io/giteepage/mobile-fc-static/images/background.jpg');
+    background-image: url('/images/background.jpg');
     background-repeat: repeat;
 }
 
@@ -395,7 +395,7 @@ body {
     height: 240px;
     
     /* background-color: gray; */
-    background-image: url('https://peytonwang.gitee.io/giteepage/mobile-fc-static/images/screen_background1.gif');
+    background-image: url('/images/screen_background1.gif');
     background-size: cover;
 }
 
